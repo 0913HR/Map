@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:behavior_peekHeight="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_linear_model"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/myLocationBtn"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="自设定位"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_shape"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/select_model"
+            android:layout_width="65dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="显示图层"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_shape"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"/>
+        <Button
+            android:id="@+id/route_plan"
+            android:layout_width="65dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="路线规划"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@drawable/btn_shape"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/card_bottomsheet">
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图层"
+            android:textColor="@color/black"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地图模式选择："/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/basicmap"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="标准地图"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/nightmap"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="夜间模式"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/rsmap"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="卫星地图"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_shape"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地图图层选择："/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/trafficmap"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="交通地图"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/threemap"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:gravity="center"
+                android:text="3D地图"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/mapinfo"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:gravity="center"
+                android:text="地图信息"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/leveshop"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="商场楼层"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zzc.mapsassistant.activity.MainActivity">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.amap.api.maps.MapView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/clean_keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_close"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/main_keywords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/clean_keywords"
+            android:clickable="true"
+            android:completionThreshold="1"
+            android:drawableLeft="@mipmap/ic_search"
+            android:dropDownVerticalOffset="1.0dip"
+            android:gravity="center_vertical"
+            android:hint="关键字搜索"
+            android:imeOptions="actionDone"
+            android:inputType="text|textAutoComplete"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/purple_200"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_compass"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/compass"
+        app:layout_anchor="@+id/map_view"
+        app:layout_anchorGravity="right" />
+
+    <include layout="@layout/content_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
